@@ -171,6 +171,83 @@ p{
     transition: 0.7s;
     box-shadow: -10px 10px 25px 0 rgb(139, 139, 200);
 }
+.lets h1{
+  margin-top: 15px;
+}
+/* *****************************************************About*************************************************************** */
+#about{
+  padding-top: 20%;
+  padding-bottom: 15%;
+  background: rgb(42, 0, 93);
+ 
+}
+.about p{
+  background-image: linear-gradient(43deg, #d26a6a 0%, #60e8e8 46%, #01b9f1bb 100%);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.about h1{
+
+  background-image: linear-gradient(43deg, #cbceef 0%, #0510a9 46%, #0f0fd1bb 100%);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.icons ul li{
+  position: relative;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  display: block;
+  margin-left: 10px;
+  margin-top: 5%;
+  justify-content: space-between;
+  /* background: rgb(0, 0, 0);
+  opacity: .5; */
+  text-align: center;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.icons ul li::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #d35400;
+  border-radius: 50%;
+  z-index: -1;
+  transition: .5s;
+}
+.icons ul li:hover:before{
+  filter: blur(3px);
+  box-shadow: 0 0 15px;
+}
+.icons li:hover{
+  box-shadow: 0 0 15px #f9f9f9;
+  text-shadow: 0 0 15px #f99057;
+}
+
+.icons ul{
+  display: flex;
+  margin-left: 10%;
+}
+
+@media ( max-width:991px){
+  .about p{
+    padding-right: 60px;
+  }
+  #about{
+    padding-top: 10%;
+  }
+  .icons ul{
+    margin-left: 3%;
+  }
+}
+
+/* ***************************************************Projects********************************************************* */
 
 .projects{
     margin-left: 44%;
@@ -213,7 +290,17 @@ p{
 .bi{
     display: none;
 }
-
+#projects-m{
+  display: none;
+}
+@media (max-width:991px){
+  #project{
+    display:none;
+  }
+  #projects-m h2{
+    color: black;
+  }
+}
 
 /* **************************************Contact******************************************************* */
 .contactt{
@@ -268,4 +355,45 @@ p{
 }
 .bg{
 background-image: linear-gradient(#8720bf, #ef5c01);
+}
+/* **************************************************footer************************************************************* */
+
+.icons-bottom ul li{
+  position: relative;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin-left: 10px;
+  margin-top: 5%;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.icons-bottom ul li::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fe8032;
+  border-radius: 50%;
+  z-index: -1;
+  transition: .5s;
+}
+.icons-bottom ul li:hover:before{
+  filter: blur(3px);
+  box-shadow: 0 0 15px;
+}
+.icons-bottom li:hover{
+  box-shadow: 0 0 15px #fa2626;
+  text-shadow: 0 0 15px #ff0000;
+}
+
+.icons-bottom ul{
+  display: flex;
+  margin-left: 80%;
 }
